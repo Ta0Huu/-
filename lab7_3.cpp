@@ -4,6 +4,7 @@
 using namespace std;
 
 double adiff(double A,double B){
+    double Y;
     while(A >360 or A < -360){
         if(A > 360){
             A = A-360;
@@ -21,11 +22,13 @@ double adiff(double A,double B){
         }
     }
     if ((360 - abs(A-B)) > abs(A-B)) {
-    double Y = abs(A-B);
+    Y = abs(A-B);
     }
     else {
-    double Y = 360-abs(A-B);
+    Y = 360-abs(A-B);
     }
+    return Y;
+    
 }
 
 int main(){
@@ -37,4 +40,3 @@ int main(){
   cout << adiff(90,-90) << "\n";
   cout << adiff(1000,280) << "\n";
   cout << adiff(60,244) << "\n";
-}
